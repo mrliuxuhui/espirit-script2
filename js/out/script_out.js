@@ -1,5 +1,11 @@
-var ORDER_TYPE, initWarehouseArea, warehouseAreaIdStash, batchUrl = '/wms/bill/other/batch', insertEventCount = 0,
-  updateEventCount = 0, warehouseBinIds = '', isEdit = !1, flag = '1';
+var ORDER_TYPE,
+    initWarehouseArea,
+    warehouseAreaIdStash,
+    batchUrl = '/wms/bill/other/batch',
+    insertEventCount = 0,
+    updateEventCount = 0,
+    warehouseBinIds = '',
+    isEdit = !1, flag = '1';
 $(function() {
   ORDER_TYPE = 1, WMS_OTHER_STOCK_IN.init(), WMS_SN.initSN(), filterSet.customerCondition['order_type' + OPERATE_IN + ORDER_TABLE] = '1,3', top.EgeniePermission.checkPermit(window);
 });
@@ -85,7 +91,9 @@ var WMS_OTHER_STOCK_IN = {
     if (!WMS_OTHER_STOCK_IN.verifyData()) return msg.alert('单据信息不完整');
     let e = WMS_COMMON.transform($(defaultInsertForm).serializeArray()), t = {}, a = $(detailTable), r = a.getDataIDs(),
       i = ['warehouse_area_id', 'warehouse_bin_id', 'sku_id', 'batch_id', 'batch_no', 'expiry_date', 'manufacture_date', 'number', 'cost_price', 'note', 'sns', 'stock_num'];
-    a.find('.jqgrow').first().find('[aria-describedby="detailTable_product_name"]').click(), t.count = r.length, r.forEach((e, r) => {
+        a.find('.jqgrow').first().find('[aria-describedby="detailTable_product_name"]').click(),
+        t.count = r.length,
+            r.forEach((e, r) => {
       t[r + 1 + '_children'] = Object.assign(JSON.parse(JSON.stringify(a.getRowData(e), i)), { number: $(`#number_${e}`).val() }, { cost_price: $(`#price_${e}`).val() }, { warehouse_bin_id: $('#select_warehouse_bin_id_' + e).val() || '' });
     }), $.ajax({
       url: wmsPrefix + '/create',
