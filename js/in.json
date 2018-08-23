@@ -1,0 +1,78 @@
+{
+  "parent": {
+    "order_type": "0",// 1 出库单  0 入库单
+    "warehouse_id": "104183",//仓库id
+    "warehouse_area_id": "210010903646",// 库区id
+    "other_stock_order_type": "3",//出入库类型 id
+    "other_stock_order_date": "2018-08-23",//出入库日期
+    "note": ""//
+  },
+  "children": {//详情列表 按sku
+    "count": 5, //总数
+    "1_children": { // 序号_children
+      "warehouse_area_id": "210010903646", //库区id *
+      "warehouse_bin_id": "0", //库位id *
+      "sku_id": "2044723",//skuid *
+      "batch_no": "",//批号
+      "expiry_date": "",//过期时间
+      "manufacture_date": "",//生产日期
+      "number": "1",//出入库商品数量 *
+      "cost_price": "0.00",//成本价格
+      "note": "",//备注
+      "sns": "",//
+      "stock_num": "0"// 库存数量
+    },
+    "2_children": {
+      "warehouse_area_id": "210010903646",
+      "warehouse_bin_id": "0",
+      "sku_id": "2044721",
+      "batch_no": "",
+      "expiry_date": "",
+      "manufacture_date": "",
+      "number": "1",
+      "cost_price": "0.00",
+      "note": "",
+      "sns": "",
+      "stock_num": "0"
+    },
+    "3_children": {
+      "warehouse_area_id": "210010903646",
+      "warehouse_bin_id": "0",
+      "sku_id": "2044719",
+      "expiry_date": "",
+      "batch_no": "",
+      "manufacture_date": "",
+      "number": "1",
+      "cost_price": "0.00",
+      "note": "",
+      "sns": "",
+      "stock_num": "0"
+    },
+    "4_children": {
+      "warehouse_area_id": "210010903646",
+      "warehouse_bin_id": "0",
+      "sku_id": "2044724",
+      "batch_no": "",
+      "expiry_date": "",
+      "manufacture_date": "",
+      "number": "1",
+      "cost_price": "0.00",
+      "note": "",
+      "sns": "",
+      "stock_num": "0"
+    },
+    "5_children": {
+      "warehouse_area_id": "210010903646",
+      "warehouse_bin_id": "0",
+      "sku_id": "2044722",
+      "batch_no": "",
+      "expiry_date": "",
+      "manufacture_date": "",
+      "number": "1",
+      "cost_price": "0.00",
+      "note": "",
+      "sns": "",
+      "stock_num": "0"
+    }
+  }
+}

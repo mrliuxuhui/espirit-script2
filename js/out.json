@@ -1,11 +1,11 @@
 {
   "parent": {
-    "order_type": "1",
-    "warehouse_id": "104183",
-    "warehouse_area_id": "210010903646",
-    "other_stock_order_type": "5",
-    "other_stock_order_date": "2018-08-23",
-    "note": ""
+    "order_type": "1", // 1 出库单  0 入库单
+    "warehouse_id": "104183", //仓库id
+    "warehouse_area_id": "210010903646", // 库区id
+    "other_stock_order_type": "5", //出入库类型 id
+    "other_stock_order_date": "2018-08-23",//出入库日期
+    "note": ""//备注
   },
   "children": {
     "count": 0
