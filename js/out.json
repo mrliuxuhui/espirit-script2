@@ -1,0 +1,13 @@
+{
+  "parent": {
+    "order_type": "1",
+    "warehouse_id": "104183",
+    "warehouse_area_id": "210010903646",
+    "other_stock_order_type": "5",
+    "other_stock_order_date": "2018-08-23",
+    "note": ""
+  },
+  "children": {
+    "count": 0
+  }
+}

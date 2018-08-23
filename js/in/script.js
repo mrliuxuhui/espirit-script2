@@ -1,5 +1,11 @@
-var ORDER_TYPE, initWarehouseArea, warehouseAreaIdStash, isEdit = !1, warehouseBinIds = '',
-  batchUrl = '/wms/bill/other/batch', whichModule = 'WMSOtherIn', whichGirdToShowData = '#parentTable';
+var ORDER_TYPE,
+    initWarehouseArea,
+    warehouseAreaIdStash,
+    isEdit = !1,
+    warehouseBinIds = '',
+    batchUrl = '/wms/bill/other/batch',
+    whichModule = 'WMSOtherIn',
+    whichGirdToShowData = '#parentTable';
 $(function() {
   ORDER_TYPE = 0, WMS_OTHER_STOCK_IN.init(), WMS_SN.initSN();
 });
@@ -93,9 +99,14 @@ var WMS_OTHER_STOCK_IN = {
     WMS_COMMON.inApprove(parentTable);
   }, save: function() {
     if (!WMS_OTHER_STOCK_IN.verifyData()) return msg.alert('单据信息不完整');
-    let e = WMS_COMMON.transform($(defaultInsertForm).serializeArray()), t = {}, a = $(detailTable), r = a.getDataIDs(),
+    let e = WMS_COMMON.transform($(defaultInsertForm).serializeArray()),
+        t = {},
+        a = $(detailTable),
+        r = a.getDataIDs(),
       i = ['warehouse_area_id', 'warehouse_bin_id', 'sku_id', 'batch_id', 'batch_no', 'expiry_date', 'manufacture_date', 'number', 'cost_price', 'note', 'sns', 'stock_num'];
-    a.find('.jqgrow').first().find('[aria-describedby="detailTable_product_name"]').click(), t.count = r.length, r.forEach((e, r) => {
+      a.find('.jqgrow').first().find('[aria-describedby="detailTable_product_name"]').click(),
+          t.count = r.length,
+          r.forEach((e, r) => {
       t[r + 1 + '_children'] = Object.assign(JSON.parse(JSON.stringify(a.getRowData(e), i)), { number: $(`#number_${e}`).val() }, { cost_price: $(`#price_${e}`).val() }, { warehouse_bin_id: $('#select_warehouse_bin_id_' + e).val() || '' });
     }), $.ajax({
       url: wmsPrefix + '/create',
